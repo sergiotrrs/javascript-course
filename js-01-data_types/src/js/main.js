@@ -158,7 +158,50 @@ console.log( typeof myName ); // 'undefined'
 
  */
 const edadMascota = 10;
-// conversión explícita a String
+// conversión explícita a String ============================================
 const edadMascotaString = String( edadMascota );
 console.log(`Mi mascota tiene ${ edadMascotaString } años`);
 console.log(`Mi mascota tiene ${ edadMascota } años`);
+console.log( String( true ) ); // "true"
+console.log( String( null ) ); // 
+console.log( String( undefined ) ); // "undefined"
+console.log( String( [] ) ); // empty Array-> ""
+console.log( String( [2,3,4,5,null,3] ) ); // "2,3,4,5,,3"
+console.log( String( {} ) ); // [object Object]
+console.log( String( {name:"Serch", active:true} ) ); // [object Object]
+// Para lo objetos se recomienda usar el métod JSON.stringyfy( object )
+// convierte un objeto en formato JSON
+console.log( JSON.stringify( {name:"Serch", active:true} ) ); // {"name":"Serch","active":true}
+
+// conversión implícita a number ============================================
+const costo = "100";
+const costoConIVA = costo * 1.16 ; // 116.00 conversión implícita de string a number
+
+// conversión explícita a number ============================================
+const precioCroquetas = "2000";
+const precioJabon = "300.50";
+const precioVitaminas = "600.30";
+const costoTotal =  precioCroquetas + precioJabon + precioVitaminas; // 2000300.50600.30
+console.log( costoTotal );
+
+/*
+ Number() Vs parseInt() y parseFloat()
+  - Number convierte enteros y decimales
+  - Number devuelve NaN si la cadena contiene algún caracter no numérico
+  - Con parseInt y parseFloat, si la entrada comienza con un valor no numérico devuelve NaN
+  - parseInt convierte solo la parte entera
+  - parseFloat convierte la parte entera y decimales
+  - parseInt y parseFloat realiza la conversión hasta encontrar un caracter no numérico
+*/
+
+console.log( Number("68.58") ); // 68.58
+console.log( parseInt("68.58") ); // 68
+console.log( parseFloat("68.58") ); // 68.58
+
+console.log( Number("68.58 dolares") ); // NaN
+console.log( parseInt("68.58 dolares") ); // 68
+console.log( parseFloat("68.58 dolares") ); // 65.58
+
+console.log( Number("$68.58 dolares") ); // NaN
+console.log( parseInt("$68.58 dolares") ); // NaN
+console.log( parseFloat("$68.58 dolares") ); // NaN
