@@ -205,3 +205,40 @@ console.log( parseFloat("68.58 dolares") ); // 65.58
 console.log( Number("$68.58 dolares") ); // NaN
 console.log( parseInt("$68.58 dolares") ); // NaN
 console.log( parseFloat("$68.58 dolares") ); // NaN
+
+console.log( Number("68-58") ); // NaN
+console.log( parseInt("68-58") ); // 68
+console.log( parseFloat("68-58") ); // 68
+
+console.log( Number( true ) ); // 1
+console.log( Number( false ) ); // 0
+
+console.log( Number( [] ) ); // 0
+console.log( Number( [30] ) ); // 30
+console.log( Number( [30,40] ) ); // NaN
+
+// Conversión a tipo boolean
+// En la conversión a boolean los siguientes valores son false:
+// ""(empty string), 0, NaN, null, undefined
+console.log( Boolean(1) ); // true
+console.log( Boolean(10000) ); // true
+console.log( Boolean(-1000) ); // true
+console.log( Boolean(0) ); // false
+console.log( Boolean(NaN) ); // false
+
+console.log( Boolean("") ); // false
+console.log( Boolean(" ") ); // true
+console.log( Boolean("1") ); // true
+console.log( Boolean("0") ); // true
+
+// Resumen:
+
+// Number()
+// [] (empty array) -> 0, [30]-> 30, [30,30]->NaN, false-> 0, true-> 1
+
+// String()
+// [] -> "", [12,2]->"12,2", function(){}-> "function(){}"
+// {} ->"[object,object]", {clave:valor, age:17} ->"[object,object]"
+
+// Para convertir un objeto a string, la forma correcta es usar
+// el método JSON.stringyfy( objeto );
