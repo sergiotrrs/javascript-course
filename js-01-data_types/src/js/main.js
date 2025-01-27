@@ -134,5 +134,31 @@ console.log( typeof myName ); // 'undefined'
  */
  const isActive = true;
  console.log( typeof isActive ); // boolean
- 
- 
+
+  
+ // --------------------------------------------------------------
+ /*
+   Conversion de datos (type casting)
+  
+   El type casting es el acto de convertir variables de un tipo de dato a otro.
+   Esto puede ser implícito(automático) o explícito (forzado por el desarrollador).
+
+ */
+
+   // Conversión implícita
+   const resultado = "5" + 2 ; // "52" Número convertido a string
+   const multiplicacion =  "5" * 3; // 15 El string convertido a number
+                     //     5   * 3 = 15
+   const division =  "two" * 6; // NaN
+                    // NaN * 6 = NaN
+
+
+ /*
+   Conversion explícita de datos (coerción de tipo)
+
+ */
+const edadMascota = 10;
+// conversión explícita a String
+const edadMascotaString = String( edadMascota );
+console.log(`Mi mascota tiene ${ edadMascotaString } años`);
+console.log(`Mi mascota tiene ${ edadMascota } años`);
