@@ -242,3 +242,5 @@ console.log( Boolean("0") ); // true
 
 // Para convertir un objeto a string, la forma correcta es usar
 // el método JSON.stringyfy( objeto );
+
+// Resumen : https://www.w3schools.com/js/js_type_conversion.asp
