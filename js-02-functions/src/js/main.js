@@ -70,3 +70,59 @@ sintaxis:
     };
 */
 
+// console.log( sumarDosNumeros(3,6) ); //  Cannot access 'sumarDosNumeros' before initialization
+
+// Realizar una función declarada que sume dos números, retorna el resultado de la suma
+const sumarDosNumeros = function suma(num1, num2){
+    return num1 + num2;
+};
+
+console.log( sumarDosNumeros(3,6) ); // 9
+
+let hora = 16;
+let saludarDependiendoHora;
+
+if(hora < 12){
+    saludarDependiendoHora = function(){
+        return "Buenos días";
+    };
+} else {
+    saludarDependiendoHora = function(){
+        return "Buenas tardes";
+    };
+}
+
+console.log( saludarDependiendoHora() ); 
+
+/*
+ ------------ Funciones autoinvocadas -----------------------
+             (selft-invoking functions)
+Funciones que se autoinvocan, se pueden definir con funciones anónimas.
+
+sintaxis:
+   ( function (parámetros ){} )( argumentos );
+
+*/
+( function setUp( name ) {
+    console.log(`Hola ${name}, soy una función autoinvocada`);
+})( "Erick" );
+
+
+/*
+ ------------ Funciones flecha -----------------------
+             (arrow functions)
+Funciones similares a las funciones expresadas pero:
+ - No requiere la palabra reservada function
+ - Si tiene una solo instrucción no requiere las llaves {}
+ - Si la instrucción es el mismo retorno, no requiere la palabra return
+
+sintaxis:
+    const nombreVariable = (parametros) => instrucción;
+
+    const nombreVariable = (parametros) => {
+        instrucción;
+        return expresión;
+    }
+*/
+
+//Realizar una función declarada que calcule el área de un rectángulo
