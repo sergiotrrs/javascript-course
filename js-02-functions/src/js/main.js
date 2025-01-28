@@ -126,3 +126,38 @@ sintaxis:
 */
 
 //Realizar una función declarada que calcule el área de un rectángulo
+function areaRectangulo(ladoA, ladoB){
+    return ladoA*ladoB;
+}
+// Convertir la funcion anterior a una función expresada
+const calcularAreaRectangulo = function(base, altura) { return base * altura; };
+
+// Convertir la función anterior a una función flecha
+const rectangleArea = (height, width) => height * width;
+
+console.log(`El área del rectángulo es : ${rectangleArea(10, 6)} cm2`);
+
+
+/*
+ ------------ Parámetros por defecto -----------------------
+             (default parameters)
+Inicializa un parámetro de la función, si no se envía el argumento cuando se invoca
+
+*/
+
+const saludarPersona = (nombre) => `Hola ${nombre}, bienvenido`;
+
+const saludarPersonaConDefaultParameters = (nombre = "Invitado/a") => `Hola ${nombre}, bienvenido`;
+
+console.log( saludarPersona() ); // Hola undefined, bienvenido
+console.log( saludarPersona("Serch") ); // Hola Serch, bienvenido
+console.log( saludarPersona("Valeria") ); // Hola Valeria, bienvenido
+
+console.log( saludarPersonaConDefaultParameters() ); // Hola Invitado/a, bienvenido
+console.log( saludarPersonaConDefaultParameters("Serch") ); // Hola Serch, bienvenido
+console.log( saludarPersonaConDefaultParameters("Valeria") ); // Hola Valeria, bienvenido
+
+// Realizar una función que tenga de parámetros el nombre y cohorte
+// Los valored por default de los parámetros son nombre= "participante" cohorte= "cohorte de Generation"
+// Retornar el mensaje "Hola participante, bienvenido/a a la cohorte de Generation"
+// Retornar el mensaje "Hola Dae, bienvenido/a a la cohorte Ch50"
