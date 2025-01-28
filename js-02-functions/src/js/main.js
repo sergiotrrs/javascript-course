@@ -145,7 +145,7 @@ Inicializa un parámetro de la función, si no se envía el argumento cuando se 
 
 */
 
-const saludarPersona = (nombre) => `Hola ${nombre}, bienvenido`;
+const saludarPersona = nombre => `Hola ${nombre}, bienvenido`;
 
 const saludarPersonaConDefaultParameters = (nombre = "Invitado/a") => `Hola ${nombre}, bienvenido`;
 
@@ -161,3 +161,18 @@ console.log( saludarPersonaConDefaultParameters("Valeria") ); // Hola Valeria, b
 // Los valored por default de los parámetros son nombre= "participante" cohorte= "cohorte de Generation"
 // Retornar el mensaje "Hola participante, bienvenido/a a la cohorte de Generation"
 // Retornar el mensaje "Hola Dae, bienvenido/a a la cohorte Ch50"
+const nombreCohorte = (nombre = "participante", cohorte = "cohorte de Generation") => `Hola ${nombre}, bienvenido/a a la ${cohorte}.`;
+
+console.log(nombreCohorte()); // Hola participante, bienvenido/a a la cohorte de Generation
+console.log(nombreCohorte("Paul", "CH50")); // Hola Paul, bienvenido/a a la cohorte CH50
+
+console.log( parseInt("faba") ); // NaN
+console.log( parseInt("faba", 10) ); // NaN
+// base decimal(10 dígitos): 0,1,2,3,4,5,6,7,8,9
+// base hexadecimal(16 dígitos): 0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F
+// base octal(8 dígitos): 0,1,2,3,4,5,6,7
+// base binaria(2 dígitos): 0,1
+console.log( parseInt("faba", 16) ); // 64186 valor decimal de la base hexadecimal
+
+
+
