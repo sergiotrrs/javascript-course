@@ -175,4 +175,48 @@ console.log( parseInt("faba", 10) ); // NaN
 console.log( parseInt("faba", 16) ); // 64186 valor decimal de la base hexadecimal
 
 
+/*
+ ------------ Funciones de Callback -----------------------
+ Es una función(definida, expresada, arrow, anónima) que se pasa 
+ a otra función como argumento.
+ Se pasa en el argumento como referencia ( sin parentesis).
+ */
 
+ // Arrow function que reciba un parámetro y lo imprima en consola
+ const mensajeConsola = mensaje => console.log(mensaje);
+
+ /** 
+  Arrow function que reciba un parámetro y lo imprima con alert
+  @param {string} mensaje mensaje a imprimir
+ */ 
+ const mensajeAlert = mensaje => alert(mensaje);
+
+ const mensajeTitulo = mensaje => document.getElementById("title").innerText = mensaje;
+
+ /**
+  * Función que imprime en consola o alert un mensaje.
+  * @param {string} mensaje mensaje a imprimir
+  * @param {string} opcion "consola" o "alert" el destino a imprimir 
+  */
+ const imprimirMensaje = (mensaje = "Hola", opcion = "consola") => {
+    if (opcion === "consola") {
+      mensajeConsola(mensaje);
+    } else if (opcion === "alert") {
+      mensajeAlert(mensaje);
+    } else if (opcion === "titulo") {
+      mensajeTitulo(mensaje);
+    }
+  };
+
+  // imprimirMensaje("Hola Lisset", "alert");
+  // imprimirMensaje("Hola Serch", "alert");
+  imprimirMensaje("Hola Kati");
+  imprimirMensaje("Hola Kati", "titulo");
+  
+
+// Usar función de callback del ejercicio anterior
+const imprimerMensajeConCallback = (mensaje, funcionCallback ) => funcionCallback( mensaje );
+
+imprimerMensajeConCallback("Hola Erick", mensajeConsola );
+imprimerMensajeConCallback("Hola Erick", mensajeTitulo );
+// imprimerMensajeConCallback("Hola Erick", 589 ); // funcionCallback is not a function
