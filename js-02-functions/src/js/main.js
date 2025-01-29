@@ -215,8 +215,69 @@ console.log( parseInt("faba", 16) ); // 64186 valor decimal de la base hexadecim
   
 
 // Usar función de callback del ejercicio anterior
-const imprimerMensajeConCallback = (mensaje, funcionCallback ) => funcionCallback( mensaje );
+const imprimirMensajeConCallback = (mensaje, funcionCallback ) => funcionCallback( mensaje );
 
-imprimerMensajeConCallback("Hola Erick", mensajeConsola );
-imprimerMensajeConCallback("Hola Erick", mensajeTitulo );
+imprimirMensajeConCallback("Hola Erick", mensajeConsola );
+imprimirMensajeConCallback("Hola Erick", mensajeTitulo );
 // imprimerMensajeConCallback("Hola Erick", 589 ); // funcionCallback is not a function
+
+
+// ============================ Pase por valor =================
+
+let colorPintura = "rojo";
+
+function cambiarColorPintura(color){
+  console.log(`El color que llega a la función es ${color}`); // rojo
+  color = "azul";
+  console.log(`El color de la pintura que imprime la función es ${color}`); // azul
+  return color;
+}
+
+cambiarColorPintura(colorPintura);
+console.log(`El color de la pintura final es ${colorPintura}`); // rojo
+
+
+// ============================ Pase por referencia =================
+
+const colores = ["rojo", "azul", "verde"];
+
+function cambiarColorArreglo(arreglo){
+  console.log(`El arreglo que llega a la función es ${arreglo}`); // "rojo", "azul", "verde"
+  arreglo[0] = "negro";
+  console.log(`Se imprimen los colores en la función: ${arreglo}`); // "negro", "azul", "verde"
+
+}
+
+cambiarColorArreglo( colores );
+console.log(`Los colores finales dentro del arreglo son: ${colores}`); // "negro", "azul", "verde"
+
+// =============================== Método sort() =====================================
+
+const series = ["Winnie", "Arnold", "avengers" ,"Atreve", "Digimon", "Naruto"];
+console.log( series.sort() ); // ['Arnold', 'Atreve', 'Digimon', 'Naruto', 'Winnie', 'avengers']
+
+const numeros = [ 122, 2, 1, 55]; 
+console.log( numeros.sort() ); // [1, 122, 2, 55]
+
+const ordenarNumeros = ( numA, numB) => {
+  if( numA < numB ){
+     return -1; // numA va antes que numB
+  } else if( numA > numB ) {
+     return 1; // numA va después que numB
+  } else { // Los números son iguales
+    return 0
+  }
+}
+
+console.log( ordenarNumeros( 3,6 ) ); // -1
+console.log( ordenarNumeros( 6,3 ) ); // 1
+console.log( ordenarNumeros( 3,3 ) ); // 0
+
+const numbers = [  1,   10,   3,   100,   5];
+console.log( numbers.sort( ordenarNumeros ) ); //  [1, 3, 5, 10, 100]
+//  [1,10     3,100,5];
+//  [1,3     10,100,5];
+//  [1,3,10,100   ,5 ];
+//  [1,3,10,5,   100 ];
+//  ... después de repetir las iteraciones nuevamente
+//  [1,3,5,10,,100 ];
