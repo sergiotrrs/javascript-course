@@ -281,3 +281,7 @@ console.log( numbers.sort( ordenarNumeros ) ); //  [1, 3, 5, 10, 100]
 //  [1,3,10,5,   100 ];
 //  ... después de repetir las iteraciones nuevamente
 //  [1,3,5,10,,100 ];
+
+const ordenarNumerosSimplificado = ( numA, numB) => numA - numB;
+const otrosNumeros = [  1,   10,   3,   100,   5];
+console.log( otrosNumeros.sort( ordenarNumerosSimplificado ) ); //  [1, 3, 5, 10, 100]
