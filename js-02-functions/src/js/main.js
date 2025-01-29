@@ -292,5 +292,4 @@ console.log( numerosDeLaSuerte.sort( function(a,b){return a-b} ) ); // orden asc
 
 // Ordenar de forma descendente los siguientes números:
 const numCh50 = [19, 15, 13, 18, 5];
-
-// 19, 15, 13, 18, 5
+console.log(numCh50.sort((numA, numB) => numB - numA )); // 19, 15, 13, 18, 5
