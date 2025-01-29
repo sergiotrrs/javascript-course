@@ -54,23 +54,21 @@ let temperatura = 30;
  * @returns {string} mensaje
  */
 const evaluarTemp = (temp) => {
-    if (temp === 22) {  
-        return `La temperatura de ${temp}🌡️ es ideal 😊👌.`;
-    } else if (temp >= 15 && temp <= 21) {
-        return `La temperatura de ${temp}° es fresca.`;
-    } else if (temp < 15) {
-        return `La temperatura de ${temp}° es fria 🥶.`;
-    } else {
-        return `La temperatura de ${temp}° es calurosa y le gustaría a Nan.`;
-    }
+  if (temp === 22) {
+    return `La temperatura de ${temp}🌡️ es ideal 😊👌.`;
+  } else if (temp >= 15 && temp <= 21) {
+    return `La temperatura de ${temp}° es fresca.`;
+  } else if (temp < 15) {
+    return `La temperatura de ${temp}° es fria 🥶.`;
+  } else {
+    return `La temperatura de ${temp}° es calurosa y le gustaría a Nan.`;
+  }
 };
 console.log(temperatura);
 console.log(evaluarTemp(30));
 console.log(evaluarTemp(22));
 console.log(evaluarTemp(19));
 console.log(evaluarTemp(13));
-
-
 
 //--------------- Condicional Switch --------------------------
 /*
@@ -101,32 +99,33 @@ console.log(evaluarTemp(13));
 */
 temperatura = 19;
 switch (temperatura) {
-    case 22:
-        console.log(`La temperatura de ${temperatura}🌡️ es ideal 😊👌.`);
-        break;
-    case 15:
-        console.log("estoy en 15 grados");
-    case 16:
-        console.log("estoy en 16 grados");
-    case 17:
-        console.log("estoy en 17 grados");
-    case 18:
-        console.log("estoy en 18 grados");
-    case 19:
-        console.log("estoy en 19 grados");
-    case 20:
-        console.log("estoy en 20 grados");
-    case 21:
-        console.log(`La temperatura de ${temperatura}° es fresca.`);
-        break;
-    case 13:
-    case 14:
-        console.log(`La temperatura de ${temperatura}° es fria 🥶.`);
-        break;
-    default:
-        console.log(`La temperatura de ${temperatura}° es calurosa y le gustaría a Nan.`);
-        break;
-
+  case 22:
+    console.log(`La temperatura de ${temperatura}🌡️ es ideal 😊👌.`);
+    break;
+  case 15:
+    console.log("estoy en 15 grados");
+  case 16:
+    console.log("estoy en 16 grados");
+  case 17:
+    console.log("estoy en 17 grados");
+  case 18:
+    console.log("estoy en 18 grados");
+  case 19:
+    console.log("estoy en 19 grados");
+  case 20:
+    console.log("estoy en 20 grados");
+  case 21:
+    console.log(`La temperatura de ${temperatura}° es fresca.`);
+    break;
+  case 13:
+  case 14:
+    console.log(`La temperatura de ${temperatura}° es fria 🥶.`);
+    break;
+  default:
+    console.log(
+      `La temperatura de ${temperatura}° es calurosa y le gustaría a Nan.`
+    );
+    break;
 }
 
 /**
@@ -140,3 +139,41 @@ switch (temperatura) {
  * @param {number} velocidad
  * @returns {string} mensaje
  */
+const velocidadVentilador = (velocidad) => {
+  switch (velocidad) {
+    case 0:
+      return `Apagado`;     
+    case 1:
+      return`Baja` ;
+    case 2:
+      return `Media`;
+    case 3:
+      return `Alta`;    
+    default:
+      return `Valor desconocido`;
+  }
+};
+console.log(velocidadVentilador(0));
+console.log(velocidadVentilador(1));
+console.log(velocidadVentilador(2));
+console.log(velocidadVentilador(3));
+console.log(velocidadVentilador(8));
+
+const velocidadVenti = (velocidad) => {
+  if (velocidad === 0) {
+    return `Apagado`;
+  } else if (velocidad === 1) {
+    return `Baja`;
+  } else if (velocidad === 2) {
+    return `Media`;
+  } else if (velocidad === 3) {
+    return `Alta`;
+  } else {
+    return `Valor desconocido`;
+  }
+};
+console.log(velocidadVenti(0));
+console.log(velocidadVenti(1));
+console.log(velocidadVenti(2));
+console.log(velocidadVenti(3));
+console.log(velocidadVenti(8));
