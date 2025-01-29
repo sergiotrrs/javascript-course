@@ -285,3 +285,12 @@ console.log( numbers.sort( ordenarNumeros ) ); //  [1, 3, 5, 10, 100]
 const ordenarNumerosSimplificado = ( numA, numB) => numA - numB;
 const otrosNumeros = [  1,   10,   3,   100,   5];
 console.log( otrosNumeros.sort( ordenarNumerosSimplificado ) ); //  [1, 3, 5, 10, 100]
+
+const numerosDeLaSuerte = [  7,   21,   14,   28,   35];
+console.log( numerosDeLaSuerte.sort( (a,b)=> a-b ) ); // orden ascendente 7, 14, 21, 28, 35
+console.log( numerosDeLaSuerte.sort( function(a,b){return a-b} ) ); // orden ascendente 7, 14, 21, 28, 35
+
+// Ordenar de forma descendente los siguientes números:
+const numCh50 = [19, 15, 13, 18, 5];
+
+// 19, 15, 13, 18, 5
