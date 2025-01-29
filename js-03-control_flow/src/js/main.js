@@ -45,7 +45,7 @@
 const temperatura = 30;
 
 /**
- * Función que recibe la temeperatura y devuelve un mensaje:
+ * Función que recibe la temperatura y devuelve un mensaje:
  * Si la temperatura es = 22 grados: La temperatura de 22 grados es ideal
  * Si la temperatura es de 15 a 21 grados: La temperatura de 14 grados es fresca.
  * Si la temperatura es menor a 15 grados: La temperatura de 8 grados es fria
@@ -53,4 +53,19 @@ const temperatura = 30;
  * @param {number} temperatura
  * @returns {string} mensaje
  */
+const evaluarTemp = (temp) => {
+    if (temp === 22) {
+        return `La temperatura de ${temp}🌡️ es ideal 😊👌.`;
+    } else if (temp >= 15 && temp <= 21) {
+        return `La temperatura de ${temp}° es fresca.`;
+    } else if (temp < 15) {
+        return `La temperatura de ${temp}° es fria 🥶.`;
+    } else {
+        return `La temperatura de ${temp}° es calurosa y le gustaría a Nan.`;
+    }
+};
+console.log(evaluarTemp(30));
+console.log(evaluarTemp(22));
+console.log(evaluarTemp(19));
+console.log(evaluarTemp(13));
 
