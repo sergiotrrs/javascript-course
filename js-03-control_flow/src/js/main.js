@@ -215,7 +215,7 @@ console.log(verificarEdad(18));
 console.log(verificarEdad(17));
 
 // ----------------- Ejemplo de if-else ---------------------
-const evalurEdadConIfElse = (edad) => {
+const evaluarEdadConIfElse = (edad) => {
   if (edad >= 18) {
     return "Eres mayor de edad";
   } else {
@@ -223,7 +223,7 @@ const evalurEdadConIfElse = (edad) => {
   }
 };
 
-console.log(evalurEdadConIfElse(20)); // Eres mayor de edad
+console.log(evaluarEdadConIfElse(20)); // Eres mayor de edad
 
 
 
