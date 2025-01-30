@@ -59,4 +59,44 @@ const myArray4 = new Array(5); // [undefined, undefined, undefined, undefined, u
 const myArray5 = [5,6]; // [5,6]
 const myArray6 = new Array(5,6); // [5,6]
 
+// ============ Iterar un  arreglo con for loop ============
+/*
+ Sintaxis:
+    for (let i = 0; i < array.length; i++) {
+        console.log(array[i]);
+    }
+
+*/
+const nombres = ["Juan", "Pedro", "María", "Ana"];
+for ( let index = 0; index < nombres.length; index++ ){
+    console.log( nombres[index] ); // Juan, Pedro, María, Ana
+}
+console.log( "Me muestro en consola, muchas veces?" ); // Se muestra una vez en la consola
+
+// ============ Iterar un  arreglo y mostrar los elementos como una lista ============
+
+const gelatinas = ["Fresa", "Limon", "Naranja", "Uva"];
+const gelatinasLista = [];
+
+for ( let index = 0; index < gelatinas.length; index++ ) {
+    gelatinasLista.push(`<li> ${ gelatinas[index] } </li>`);
+}
+
+console.log( gelatinasLista ); 
+/* 
+  [
+   "<li> Fresa </li>", 
+   "<li> Limon </li>", 
+   "<li> Naranja </li>", 
+   "<li> Uva </li>"
+   ]
+*/
+const refGeletinasLista = document.getElementById("gelatina-lista");
+console.log(refGeletinasLista);
+refGeletinasLista.innerHTML = gelatinasLista.join(""); // "<li></li><></><></><></>"
+
+// [1,2,3,4] -> string -> "1,2,3,4"
+// [<li></li>,<></>,<></>,<></>] -> string -> "<li></li>,<></>,<></>,<></>"
+
+
 
