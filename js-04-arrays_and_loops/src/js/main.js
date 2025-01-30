@@ -126,3 +126,43 @@ for ( const color of colores ) {
  *  - Usar for of
  *  - De preferencia usar una función 
  */
+const cantantes = ["Juan Gabriel", "José José", "Rocío Dúrcal", "Ana Gabriel"];
+const refListaCantantes = document.getElementById("cantantes-lista");
+
+const generarListaCantantes = (cantantesArray) => {
+    const cantantesLista = [];
+    for (const cantante of cantantesArray) {
+        cantantesLista.push(`<li>${cantante}</li>`);
+    }
+    return cantantesLista.join("");
+}
+
+const insertarListaDeCantantesAlDOM = (lista, refDom)=> refDom.innerHTML = lista;
+
+const listItemsOfCantantes = generarListaCantantes(cantantes);
+insertarListaDeCantantesAlDOM( listItemsOfCantantes, refListaCantantes);
+
+// ------------------- Uso de break en ciclos ----------------------------
+// break detiene la ejecución de la iteración en curso y termina el ciclo.
+
+let iteracion = 0;
+
+for ( ;   ;  ){
+    console.log( `Núm de iteración: ${iteracion}` ); // 0, 1, 2, 3, 4
+    iteracion++;
+    if ( iteracion === 5 ){
+        break;
+    }
+}
+
+// ------------------- Uso de break y label en ciclos anidados ----------------------------
+multiplicando:
+for (let i = 1; i <= 7; i++ ){
+    multiplicador:
+    for (let j = 1; j <= 10 ; j++){        
+        console.log(`${i} x ${j} = ${i * j}`);             
+        if( i >= 4 ) break multiplicando;
+    }
+
+}
+
