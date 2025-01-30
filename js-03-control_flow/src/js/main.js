@@ -240,3 +240,47 @@ console.log(evaluarEdadConIfElse(20)); // Eres mayor de edad
  Realizar una versión con if-else-elseif y otra con switch.
 
 */
+// let mes = Number(prompt("Ingresa un número de mes (1 al 12):"));
+let mes = 2;
+let estacion; 
+switch ( mes ){
+    case 12: case 1: case 2:
+        estacion = `Invierno`;
+        break;
+    case 3:
+    case 4:
+    case 5:
+        estacion = `Primavera`;
+        break;
+    case 6:
+    case 7:
+    case 8:
+        estacion = `Verano`;
+        break;
+    case 9:
+    case 10:
+    case 11:
+        estacion = `Otoño`;
+        break;
+    default:
+        estacion = `Mes incorrecto`;
+        break;
+}
+document.getElementById("title").innerText = estacion;
+
+let season = Number(prompt("¿Escribe el mes en curso (1-12) ?"));
+const estAño = (season) => {
+    if (season >= 3 && season <= 5) {
+        return "Primavera 🌻";
+    } else if (season >= 6 && season <= 8) {
+        return "Verano 🏖️";
+    } else if (season >= 9 && season <= 11) {
+        return "Otoño 🍂";
+    } else if (season === 12 || season === 1 || season == 2) {
+        return "Invierno ⛄";
+    } else {
+        return "Número de mes no válido ❌";
+    }
+}; 
+// alert( estAño(season) );
+
