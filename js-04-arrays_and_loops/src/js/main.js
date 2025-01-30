@@ -99,4 +99,30 @@ refGeletinasLista.innerHTML = gelatinasLista.join(""); // "<li></li><></><></><>
 // [<li></li>,<></>,<></>,<></>] -> string -> "<li></li>,<></>,<></>,<></>"
 
 
+// Simplificaciones en la iteración de un arreglo
+// ----------------------- Uso de for... of ------------------
+/* Ejecuta una sentencia por cada elemento de un objeto iterable(array, colección, string).
+Sintaxis:
+    for (const iterator of object) {
+    
+    }
+*/
 
+const colores = ["Rojo", "Azul", "Verde", "Amarillo"];
+
+for (let i = 0; i < colores.length; i++) {
+    const element = colores[i];
+    console.log(element);    
+}
+
+for ( const color of colores ) {
+    console.log( color );
+}
+
+// ---------------------- Ejercicio con for of ---------------------
+/**
+ *  Del siguiente arreglo de cantantes, mostrar en el DOM, el listado como unorder list.
+ *  const cantantes = ["Juan Gabriel", "José José", "Rocío Dúrcal", "Ana Gabriel"];
+ *  - Usar for of
+ *  - De preferencia usar una función 
+ */
