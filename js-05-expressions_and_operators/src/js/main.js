@@ -120,3 +120,45 @@ console.log("apple".localeCompare("banana")); // -1 (porque "apple" < "banana")
 console.log("grape".localeCompare("grape"));  // 0 (son iguales)
 console.log("pear".localeCompare("orange"));  // 1 (porque "pear" > "orange")
 console.log("a".localeCompare("A", "en", { sensitivity: "base" })); // 0
+
+
+// Number: devuelve verdadero solo si ambos operandos tienen el mismo valor. 
+// +0 y -0 se tratan como el mismo valor. 
+// Si alguno de los operandos es NaN, devuelve falso.
+console.log(  +0 == -0 ); // true
+console.log(  NaN == NaN ); // false
+console.log(  1 == 1 ); // true
+console.log(  1 == 1.0 ); // true
+console.log(  1 == 1.1 ); // false
+
+console.log(  isNaN("hola" / 3 )  ); // true
+
+
+// ------- Operadores de asignación ----------------
+/*
+ Asigna un valor a su operador izquierdo basándose en el valor
+ de su operando derecho:
+
+ asignación =
+ 
+ Operadores abreviados ( compuestos ):
+  op1 += op2  -> op1 = op1 + op2
+  op1 -= op2  -> op1 = op1 - op2
+  op1 *= op2  -> op1 = op1 * op2
+
+*/
+let suma = 0;
+// Agregar 2 al valor de suma
+// suma = suma  + 2;
+suma += 2;
+
+// --------- ejercicio mental --------------------
+let valorA = 15;
+valorA *= 2; // valorA = valorA * 2;
+
+
+// --------- ejercicio mental --------------------
+let mensaje = "Me voy a de vacaciones";
+mensaje += 2; // mensaje = mensaje + 2; "Me voy a de vacaciones2"
+
+
