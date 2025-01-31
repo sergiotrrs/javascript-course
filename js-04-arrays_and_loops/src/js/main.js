@@ -254,3 +254,55 @@ for (let incremento = 0; incremento < 10; incremento ++ ) {
     console.log(incremento);
 }
 // console.log(incremento); // incremento no está definida
+
+
+// ================ Hoisting =======================
+/*
+  El "hoisting" en JavaScript es un comportamiento que ocurre durante 
+  la fase de compilación antes de la ejecución del código. 
+  Se refiere a la elevación (movimiento) de las declaraciones 
+  de variables y funciones al inicio de su contexto de ejecución
+
+*/
+
+
+/*
+  Las variables declaradas con var son elevadas al inicio de su contexto 
+  de ejecución (ya sea el ámbito de función o el ámbito global).
+  
+  Sin embargo, solo la declaración de la variable es elevada, 
+  no la asignación. Esto significa que la variable existe, 
+  pero su valor es undefined hasta que llega a la línea de asignación.
+*/
+
+console.log(phone); // undefined
+var phone = "55-65-123-123";
+console.log(phone); // 55-65-123-123
+
+/*
+  Las variables declaradas con let y const también se elevan al 
+  inicio de su contexto, pero a diferencia de var, no se inicializan 
+  automáticamente con undefined. La fase de inicialización de estas 
+  variables no ocurre hasta llegar a la línea de código donde se declaran.
+
+*/
+// console.log(email); // ReferenceError: Cannot access 'email' before initialization
+let email = 10;
+
+
+// ------------------- Uso de continue en ciclos ----------------------------
+console.log(   NaN === NaN );  // false
+for (let i = 0 ; i <= 5; i++ ){
+    if ( i === 3) continue;
+    console.log("Estoy dentro del ciclo for"); 
+    console.log("Valor de i ", i ); // 0, 1, 2,  4 , 5
+}
+
+for (let i = 0 ; i <= 5; i++ ){
+    if ( i !== 3){ 
+    console.log("Estoy dentro del ciclo for"); 
+    console.log("Valor de i ", i ); // 0, 1, 2,  4 , 5
+    }
+}
+
+
