@@ -166,3 +166,91 @@ for (let i = 1; i <= 7; i++ ){
 
 }
 
+
+ // ============ Ejercicio mental =============================
+let myIteration; // undefined
+
+for (myIteration = 0; myIteration <= 5; myIteration++) {
+    console.log("For loop", myIteration ); //  
+    // if ( myIteration === 3 ) break;
+}
+console.log("Final", myIteration); // 
+
+
+// =============== El scope de las variables =================
+
+// ================ Function Scope ====================
+/*
+  Variables declaradas con var, let y const tienen un alcance de función. 
+  Esto significa que están limitadas al contexto de la función 
+  en la que se declaran.
+*/
+function functionScope(){
+    var myVar = 10;
+    let myLet = 20;
+    const myConst = 30;
+
+    console.log(myVar); // 10
+    console.log(myLet); // 20
+    console.log(myConst); // 30
+    
+}
+functionScope();
+
+// console.log(myVar); // myVar is not defined
+// console.log(myLet); // myLet is not defined
+// console.log(myConst); // myConst is not defined
+
+
+// ================ Reassigment and Redeclaration========
+/*
+ Declarar una variable significa que se reserva el nombre 
+ en memoria en el scope actual. 
+ 
+ Inicializar una variable es establecer el valor de la variable
+
+*/
+// Pueden ser reasignadas y redeclaradas dentro del 
+// mismo contexto de función.
+var userName = 10;
+userName = 20; // Reasignación válida
+var userName = 30; // Redeclaración válida en el mismo contexto de función
+
+// Pueden ser reasignadas dentro del mismo bloque y no pueden 
+// ser redeclaradas en el mismo ámbito.
+let age = 10;
+age = 20; // Reasignación válida
+// let age = 30; // Error: No se puede redeclarar en el mismo ámbito
+
+// No pueden ser reasignadas después de su inicialización y tampoco 
+// pueden ser redeclaradas en el mismo ámbito.
+const address = 10;
+// address = 20; // Error: No se puede reasignar
+// const address = 30; // Error: No se puede redeclarar
+
+
+// ================ Block Scope ====================
+/*
+  Variables declaradas con let y const tienen un alcance de bloque. 
+  Esto significa que están limitadas al bloque en el que se declaran.
+*/
+{
+    var a = "a";
+    let b = "b";
+    const c = "c"; 
+
+    console.log(a); // a
+    console.log(b); // b
+    console.log(c); // c
+}
+
+console.log(a); // a
+// console.log(b); // b is not defined
+// console.log(c); // c is not defined
+
+// ------------- Ejercicio mental ---------------------------
+
+for (let incremento = 0; incremento < 10; incremento ++ ) {
+    console.log(incremento);
+}
+// console.log(incremento); // incremento no está definida
