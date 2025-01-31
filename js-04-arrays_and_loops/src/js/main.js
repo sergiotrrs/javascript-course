@@ -291,6 +291,9 @@ let email = 10;
 
 
 // ------------------- Uso de continue en ciclos ----------------------------
+// break: Termina completamente un bucle (for, while, switch, etc.).
+// continue: Salta la iteración actual y pasa a la siguiente sin salir del bucle.
+
 console.log(   NaN === NaN );  // false
 for (let i = 0 ; i <= 5; i++ ){
     if ( i === 3) continue;
@@ -305,4 +308,35 @@ for (let i = 0 ; i <= 5; i++ ){
     }
 }
 
+
+
+// ============== Ciclo While ======================
+//                (while loop)
+/*
+ Crea un bucle que ejecuta una sentencia mientras la condición especificada
+ se cumpla.
+
+ Sintaxis:
+    while( condición) sentencia;
+
+    while ( condición ){
+        sentencias;
+    }
+
+*/
+
+while(  confirm("¿Quieres que te genere tu número de la suerte ")  ){
+    // ramdom devuelve un número aleatorio entre 0(incluido) y 1(excluido)
+    console.log(`Tu número de la suerte es ${ Math.random() } `); 
+    // Número aleatorio del 0 al 10(excluido)
+    console.log(`Tu número de la suerte es ${ Math.random() * 10 } `); 
+    // Número aleatorio del 1 al 11(excluido)           1 - 10.999999
+    console.log(`Tu número de la suerte es ${ (Math.random() * 10) + 1 } `); 
+    // Número aleatorio entero del 1 al 10(incluido)         
+    alert(`Tu número de la suerte es ${ Math.floor ((Math.random() * 10) + 1) } `); 
+
+}
+
+// Generar 100 números aleatorios en el rango de 1 al 50(incluyendo).
+// Ordenar e imprimir de manera descendente
 
