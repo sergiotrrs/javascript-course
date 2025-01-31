@@ -109,3 +109,14 @@ console.log(  0 == false ); // true
 // String: devuelve verdadero solo si ambos operandos tienen los mismos caracteres y en el mismo orden.
 console.log( "hola" == "hola" ); // true
 console.log( "hola" == "Hola" ); // false
+console.log( 'Hola "Ch50" ' == 'Hola "Ch50" ' ); 
+console.log( "Hola \"Ch50\" " == "Hola \"Ch50\" " ); 
+
+console.log("Primer línea,\nsegunda línea, \n\ttercer línea");
+
+
+// Se recomienda usar el método localCompare(): compara cadenas de texto de acuerdo con las reglas de un idioma específico
+console.log("apple".localeCompare("banana")); // -1 (porque "apple" < "banana")
+console.log("grape".localeCompare("grape"));  // 0 (son iguales)
+console.log("pear".localeCompare("orange"));  // 1 (porque "pear" > "orange")
+console.log("a".localeCompare("A", "en", { sensitivity: "base" })); // 0
