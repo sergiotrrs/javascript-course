@@ -340,3 +340,35 @@ while(  confirm("¿Quieres que te genere tu número de la suerte ")  ){
 // Generar 100 números aleatorios en el rango de 1 al 50(incluyendo).
 // Ordenar e imprimir de manera descendente
 
+// solución 1, falta ordenarlos
+const listaAleatoria = (tamañoLista) => {
+    while (tamañoLista > 0) {
+        console.log(`${tamañoLista}. Tu numero es: ${Math.floor((Math.random() * 50) + 1)}`)
+        tamañoLista--;
+    }
+}
+listaAleatoria(100);
+
+
+// Solución 2, genera y ordena
+function generarLista(tamañoLista = 100) {
+    const numMaximo = 50;
+    const offset = 1;
+    let contador = tamañoLista;
+    let numAleatorio = [];
+    while (contador > 0) {
+        numAleatorio.push(Math.floor((Math.random() * numMaximo) + offset));
+        contador--;
+    }
+    return numAleatorio;
+}
+const ordenarDescendente = (lista) => {
+    lista.sort((a, b) => b - a);
+ 
+    for (let i = 0; i < lista.length; i++) {
+        console.log(`${i}. tu numero es: ${lista[i]}`);
+    }
+}
+// ordenarDescendente(generarLista(100));
+const numerosAleatorios = generarLista();
+console.log("Ordenaros con sort", numerosAleatorios.sort( (a,b)=>b-a ) );
