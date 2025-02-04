@@ -318,6 +318,12 @@ console.log( "Hola " + usuario ); // Invitado
 
 // ------------------ Ejercicio --------------------------
 /*
-  Imprimir en consola "Acceso Denegado" es la variable esAutorizado = true
+  Imprimir en consola "Acceso Denegado" Si la variable esAutorizado = false
   En caso contrario imprimir "Acceso concedido".
 */
+let autorizado = true;
+
+let message = autorizado && "Acceso concedido" || "Acceso denegado";
+console.log( message );
+
+console.log( autorizado? "Acceso concedido":"Acceso denegado" );
