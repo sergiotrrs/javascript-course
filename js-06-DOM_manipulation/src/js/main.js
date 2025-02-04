@@ -40,6 +40,30 @@ const getElementsByQuerySelector = () =>{
     const element = document.querySelector("#descripcion-operadores");
     console.log(element);
 
+    const elementParagraph = document.querySelector("p"); // Seleccionar el primer paragraph que se encuentre    
+    console.log( elementParagraph );
+
+    const classTextCenter = document.querySelector(".text-center"); // Seleccionar el primer elemento con la clase text-center
+    console.log( classTextCenter );
+
+    const anchorAndTextWarning = document.querySelector("a.text-warning"); // primer anchor que tenga la clases text-warning
+    console.log( anchorAndTextWarning)
 }
 
 getElementsByQuerySelector();
+
+/**
+ * Acceder a varios elementos usando el selector universal
+ * 
+ */
+const getListItemsByQuerySelector = () =>{
+    // const listItems = document.querySelectorAll("main li");
+    const listItems = document.querySelectorAll(".text-start li");
+    console.log( listItems );
+}
+
+getListItemsByQuerySelector();
+
+// ----------------------- Ejercicio ----------------------------------
+// Seleccionar la imagen de dinosaurio que se muestra.
+// mostrar en consola el objeto
