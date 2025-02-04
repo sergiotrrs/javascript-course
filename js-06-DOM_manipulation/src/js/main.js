@@ -17,3 +17,29 @@ const changeElementById = () =>{
 
 changeElementById();
 
+/**
+ * Modificar elementos por su tag(etiqueta HTML)
+ */
+const changeElementsByTagName =  () => {
+   const listItems = document.getElementsByTagName("li");
+   console.log( listItems );
+
+   for( let item of listItems){
+     item.innerText = "Mi nuevo li"
+   }
+
+}
+
+// changeElementsByTagName();
+
+/**
+ * Acceder a un elemento usando el selector universar
+ */
+const getElementsByQuerySelector = () =>{
+                  // document.getElementById("descripcion-operadores");
+    const element = document.querySelector("#descripcion-operadores");
+    console.log(element);
+
+}
+
+getElementsByQuerySelector();
