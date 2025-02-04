@@ -108,3 +108,14 @@ refBtnPrimary.addEventListener("click", ()=>{
 } );
 
 // Aplicar visibility = "hidden" para el btn-secondary
+refBtnSecondary.addEventListener("click", () => {
+    refBtnSecondary.style.visibility = "hidden";
+});
+
+// Reestablecer la visualizacion de los botones primary y secondary
+// Usando el evento mouseover : Se activa cuando el puntero del ratón pasa sobre el botón
+// display: "block"      visibility: "visible"
+refBtnSuccess.addEventListener ( "mouseover", () => {
+    refBtnPrimary.style.display = "block";
+    refBtnSecondary.style.visibility = "visible"; 
+} );
