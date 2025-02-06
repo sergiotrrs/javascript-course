@@ -36,10 +36,10 @@ const getProducts = ( url ) =>{
     .then( (resolve)=> {
         console.log(resolve);
         // convierte de JSON a Objeto de js
-        resolve.json()
-            .then( (productos) => console.log( productos ) )
-            .catch( (error)=> console.log(error) )
+        return resolve.json();
     } )
+    .then( (productos) => console.log( productos ) )
+    .catch( (error)=> console.log(error) )
     .catch( (error)=> console.log(error)  )
     .finally( ()=>console.log("He terminado") ) 
 
