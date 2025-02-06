@@ -33,13 +33,8 @@ const getProducts = ( url ) =>{
     .finally( callback ) // Se ejecuta el callback independiente de que se resuelta o rechazada
    */
     fetch( url )
-    .then( (resolve)=> {
-        console.log(resolve);
-        // convierte de JSON a Objeto de js
-        return resolve.json();
-    } )
-    .then( (productos) => console.log( productos ) )
-    .catch( (error)=> console.log(error) )
+    .then( (resolve)=> resolve.json() )
+      .then( (productos) => console.log( productos ) )      
     .catch( (error)=> console.log(error)  )
     .finally( ()=>console.log("He terminado") ) 
 
