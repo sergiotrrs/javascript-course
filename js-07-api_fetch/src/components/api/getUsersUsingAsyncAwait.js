@@ -6,14 +6,13 @@ import { generateUsersCards } from "../../modules/cards/generateUsersCards.js";
  * 
  *  Lista de usuarios: https://reqres.in/api/users?page=2
  */
-const getUsersUsincAsyncAwait = (url) => {
+const getUsersUsingAsyncAwait = (url) => {
 
     const createCards = ( usersArray )=>{
         document.getElementById("cards").innerHTML = generateUsersCards( usersArray);
     }
 
-
     
   };
-  // getUsers("https://reqres.in/api/users?delay=5&page=1"); // Página 1 con retardo de 5 segundos
-  getUsers("https://reqres.in/api/users?page=2"); // Página 2, sin retardo
+  // getUsersUsingAsyncAwait("https://reqres.in/api/users?delay=5&page=1"); // Página 1 con retardo de 5 segundos
+  getUsersUsingAsyncAwait("https://reqres.in/api/users?page=2"); // Página 2, sin retardo
