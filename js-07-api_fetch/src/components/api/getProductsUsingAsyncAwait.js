@@ -10,15 +10,21 @@ async function functionName () {
 }
 
 const getProductsUsingAsyncAwait = async ( url ) =>{
-
+    try{
       console.log("Estoy iniciando en la función con Async y Await");
       const resolve = await fetch( url );
       const products = await resolve.json();
       console.log( products );
       console.log("Finalizado la petición fetch con Async y Await");
+    } catch( error ){
+      console.warn("No corro, no grito, no empujo");
+      console.error("Que pasó?", error );
+    }
+    
+
 
 };
 
 console.log("Antes de la llamada de la función");
-getProductsUsingAsyncAwait("https://fakestoreapi.com/products");
+getProductsUsingAsyncAwait("https://fakestoreapi/products");
 console.log("Después de la llamada de la función");
