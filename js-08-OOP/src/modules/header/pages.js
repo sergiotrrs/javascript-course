@@ -7,10 +7,10 @@ const pages = [
       icon: '<i class="bi bi-house-heart-fill"></i>',
     },
     {
-      name: "Products",
+      name: "Productos",
       url: "/src/pages/products/products.html",
       active: false,
-      visible: false,
+      visible: true,
       icon: '<i class="bi bi-bag-heart-fill"></i>',
     },
     {
