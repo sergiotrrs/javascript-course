@@ -1,0 +1,36 @@
+# Los comentarios comienzan con el signo de número (#)
+# Las carpeta y archivos que se desean ignorar con git se escriben en una línea nueva
+
+# No permitir archivos del sistema operativo Mac
+.DS_Store
+
+# No permitir los siguientes formatos de video
+.avi 
+.mkv
+.mp4
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# No permitir la carpeta node_modules, subcarpeta de node_modules y archivos
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
