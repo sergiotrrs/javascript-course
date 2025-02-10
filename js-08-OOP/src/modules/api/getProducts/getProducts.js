@@ -7,6 +7,8 @@ const getProducts = async( url ) => {
     try {
         const response = await fetch( url );
         const products = await response.json();
+        // TODO crear función DTO  cont productsDTO = conversionDTO( products);
+        // TODO const cards = generateCardsOfProducts( productsDTO );
         const cards = generateCardsOfProducts( products );
         insertCardsToHTML( cards );            
     } catch (error) {
