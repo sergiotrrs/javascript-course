@@ -5,7 +5,16 @@
     "price": 499.99,
     "description": "The latest Sony PlayStation 5 gaming console with ultra-fast SSD and immersive 3D audio.",
     "category": "consoles",
-    "categories": ["categoria1", "categoria2"],
+    "categories": [
+      {
+        "idCategoria": 1,
+        "description": "Consolas"
+      },
+      {
+        "idCategoria": 2,
+        "description": "Novedades"
+      }
+    ],
     "image": "/public/gaming-products-images/PlayStation-5-Console.jpg",
     "rating": {
       "rate": 4.9,
