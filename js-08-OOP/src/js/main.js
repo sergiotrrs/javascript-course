@@ -67,3 +67,4 @@ console.table( mouseLogi );
 mouseLogi.productName = "Ratoncito";
 
 console.log(  mouseLogi.productName );
+console.log( mouseLogi.printPrice() );

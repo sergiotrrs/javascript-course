@@ -50,6 +50,10 @@ class Product {
   get brand() {
     return this.#brand;
   }
+
+  printPrice() {
+    return `${this.#productName} cuesta $${this.#price} MxN`;
+  }
 }
 
 export { Product };
