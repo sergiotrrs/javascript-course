@@ -57,7 +57,13 @@ console.log( mouseGamerPixArt.imprimirPrecioDolares() );
 
 //============= Usando la clase Product =====================
 
-const mouseLogi = new Product("Mouse");
+const mouseLogi = new Product("Mouse", 800, "Logitech");
 const tecladoGamer = new Product("Teclado");
 const monitorHp = new Product("Monitor");
 const bateria = new Product();
+
+// mouseLogi.price = 1;
+console.table( mouseLogi );
+mouseLogi.productName = "Ratoncito";
+
+console.log(  mouseLogi.productName );
