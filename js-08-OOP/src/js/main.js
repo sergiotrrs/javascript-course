@@ -74,3 +74,14 @@ console.log( mouseLogi.printPrice() );
 
 const mouseMac = new Mouse("Mouse Mac", 1400, "Mac", 3000);
 console.log(  mouseMac.printPrice() );
+
+// Generando un array de Mice
+             // Product,   Mouse ,   Mouse
+const mice = [mouseLogi, mouseMac, new Mouse("m3",3,"N/A",1000) ];
+
+for( const mouse of mice ){
+    // Que método se va a utilizar?
+    console.log( mouse.card() );
+}
+
+ 
