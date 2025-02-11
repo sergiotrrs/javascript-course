@@ -3,6 +3,7 @@ import { insertMainFooter } from "/src/modules/footer/footer.js"; // ruta absolu
 // import { amdRadeonRx } from "../modules/class/amd-radeon-rx.js"; // ruta relativa
 import { amdRadeonRx, mouseGamerPixArt } from "/src/modules/class/amd-radeon-rx.js"; // ruta absoluta
 import { Product } from "../modules/class/Product.js";
+import { Mouse } from "../modules/class/Mouse.js";
 
 /*
  Ruta relativa: Son rutas que dependen de la ubicación actual del archivo. 
@@ -68,3 +69,8 @@ mouseLogi.productName = "Ratoncito";
 
 console.log(  mouseLogi.productName );
 console.log( mouseLogi.printPrice() );
+
+// ===== usar la clase mouse
+
+const mouseMac = new Mouse("Mouse Mac", 1400, "Mac", 3000);
+console.log(  mouseMac.printPrice() );

@@ -52,7 +52,14 @@ class Product {
   }
 
   printPrice() {
-    return `${this.#productName} cuesta $${this.#price} MxN`;
+    return `${this.productName} cuesta $${this.#price} MxN`;
+  }
+
+  card() {
+    return `
+        <h2>${this.productName}</h2>
+        <p>Llévatelo por ${this.price}</p>
+    `
   }
 }
 
