@@ -3,11 +3,12 @@
   "version": "0.0.1",
   "description": "Sesión correspondiente a JS-09",
   "main": "/src/js/main.js",
+  "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build", 
+    "build": "vite build",
     "preview": "vite preview",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
   },
   "keywords": [
     "npm",
@@ -18,6 +19,7 @@
   "author": "Sergio Torres",
   "license": "ISC",
   "devDependencies": {
+    "jest": "^29.7.0",
     "sass": "^1.84.0",
     "vite": "^6.1.0"
   },
