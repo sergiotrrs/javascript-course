@@ -1,5 +1,7 @@
 import "/src/css/styles.scss";
 import "./register.css"
+import * as bootstrap from 'bootstrap';
+
 
 import { insertMainHeader } from "/src/modules/header/header";
 import { insertMainFooter } from "/src/modules/footer/footer";
