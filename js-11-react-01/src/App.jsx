@@ -1,4 +1,6 @@
 import './App.css'
+import { Footer } from './components/footer/Footer';
+import { MainContent } from './components/main/MainContent';
 import { Navbar } from './components/navbar/Navbar';
 
 function App() {
@@ -7,9 +9,9 @@ function App() {
     <>
       <Navbar />
 
-      <p>Contenido de mi aplicación</p>
+      <MainContent />
 
-      <p>Footer de mi aplicación</p>
+      <Footer />
       
     </>
 
