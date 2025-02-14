@@ -1,8 +1,29 @@
-export const Footer = () => {
+import "./footer.css";
+
+const coloresVivos = {
+  color: "green",
+  backgroundColor: "yellow",
+  fontSize: "30px",
+  fontFamily: "Arial",
+};
+
+const coloresNeutros = {
+  color: "black",
+  backgroundColor: "white",
+  fontSize: "18px",
+  fontFamily: "Times New Roman",
+};
+
+
+
+
+          //        { year, cohorte }
+export const Footer = ( { year , cohorte:ch, inLove }  ) => {
   return (
     <div>
-      <p>Footer de mi aplicación</p>
-      <p>Año, Cohorte</p>
+      <p className="textFooter">Footer de mi aplicación</p>
+      <p style = { {color: "yellow", fontFamily: "Arial" } } >Año {year}, Cohorte {ch}</p>
+      <p style = { inLove ? coloresVivos : coloresNeutros  }  >Feliz 14 de febrero, también el 15, 16 y todos días</p>
     </div>
   );
 };

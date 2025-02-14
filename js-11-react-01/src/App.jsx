@@ -11,7 +11,7 @@ function App() {
       <img src="https://via.placeholder.com/800x300" alt="imagen de prueba" />
       <MainContent />
 
-      <Footer />
+      <Footer year="2025" cohorte={50} inLove={false} />
       
     </>
 
