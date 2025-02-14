@@ -77,3 +77,17 @@ const product = {
 }
 
 // obtener en variables independientes el valo de name y color
+let {name, color} = product;
+console.log(name, color);
+
+// Desestructurando un objeto dentro de otro objeto
+// const { frontera } = product.precio;
+// Obtener el color de precio en frontera
+const { color: colorJabon,  precio:{ frontera: precioFrontera }  } = product;
+console.log( colorJabon, precioFrontera);
+
+// Desestructurar el name y precio de korea, renombrar las variables
+// name -> nombre Producto
+// precio.kores -> precioKorea
+const {name: nombreProducto, precio: {korea: precioKorea } } = product;
+console.log(nombreProducto, precioKorea);
