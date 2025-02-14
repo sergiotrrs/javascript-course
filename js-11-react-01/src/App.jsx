@@ -7,8 +7,8 @@ function App() {
  
   return (
     <>
-      <Navbar />
-
+      <Navbar src="/img/dinosaurio.jpg" alt="Dino programador" />
+      <img src="https://via.placeholder.com/800x300" alt="imagen de prueba" />
       <MainContent />
 
       <Footer />
