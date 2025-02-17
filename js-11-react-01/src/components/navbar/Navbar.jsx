@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 /**
  *   Las props (abreviación de "properties") son parámetros 
@@ -21,8 +22,8 @@ export const Navbar = ( props ) => {
         <h2>Cohorte {cohorte}</h2>
         <img src={props.src} alt={props.alt} />
         <ul>
-            <li>Inicio</li>
-            <li>Productos</li>
+            <li><Link to="/">Inicio</Link>  </li>
+            <li><Link to="/counter">Contador</Link></li>
             <li>Contacto</li>
         </ul>
     </nav>
